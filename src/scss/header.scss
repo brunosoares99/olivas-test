@@ -1,0 +1,14 @@
+.header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  &__logo {
+    width: 150px;
+  }
+  &__menu {
+    display: none;
+  }
+}

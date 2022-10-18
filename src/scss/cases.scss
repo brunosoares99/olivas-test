@@ -1,0 +1,44 @@
+@mixin line-style {
+  content: "";
+  display: block;
+  background-color: $blue-color-2;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.cases {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  &__title {
+    text-align: center;
+    color: $blue-color-6;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    position: relative;
+    &::after {
+      @include line-style;
+      width: 35px;
+      height: 4px;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 10px;
+    }
+    span {
+      color: $blue-color-2;
+    }
+  }
+  &__aside-button {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    color: $pink-color-1;
+    border: 1px solid $pink-color-1;
+    border-radius: 23px;
+    padding: 0.25rem 1.5rem;
+    display: inline-block;
+    &:visited {
+      color: $pink-color-1;
+    }
+  }
+}
