@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="src/assets/icons/cropped-favicon-32x32.png">
   <link rel="stylesheet" href="dist/css/main.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="src/index.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -15,7 +16,8 @@
       <img class="header__logo" src="src/assets/logotipo.svg" alt="Olivas Digital">
     </a>
     <nav class="header__menu">
-      <ul>
+      <span class="header__menu-close material-symbols-outlined ">close</span>
+      <ul class="header__menu-ul">
         <li>
           <a href="">Quem Somos</a>
         </li>
@@ -31,15 +33,15 @@
         <li>
           <a href="">Canais de comunicação</a>
         </li>
-        <li>
-          <a href="">
+        <li class="header__li_button">
+          <a class="header__button" href="">
             <span class="material-symbols-outlined">mail</span>
             <span>Fale com especialista</span>
           </a>
         </li>
       </ul>
     </nav>
-    <span class="material-symbols-outlined">menu</span>
+    <span class="material-symbols-outlined header__menu-open">menu</span>
   </header>
   <main>
     <section class="home">
@@ -158,12 +160,149 @@
     </section>
     <section class="cases">
       <h2 class="cases__title">Cases</h2>
+      <div class="cases__slider">
+        <span class="material-symbols-outlined cases__icon cases__icon--left">
+          arrow_back_ios
+        </span>
+        <div class="cases__slider-wrapper">
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">UMA DÉCADA DE HISTÓRIA EM GOVERNADOR VALADARES</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">Pernambucanas digitaliza a operação e melhora a experiência do cliente</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box cases__slider-box--active">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">Pernambucanas digitaliza a operação e melhora a experiência do cliente</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">UMA DÉCADA DE HISTÓRIA EM GOVERNADOR VALADARES</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+          <div class="cases__slider-box">
+            <div class="cases__slider-box-image">
+              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+            </div>
+            <div class="cases__slider-details">
+              <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>
+              <p class="cases__slider-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown. digital born
+              </p>
+              <a class="cases__slider-button" href="">
+                Saiba mais
+              </a>
+            </div>
+          </div>
+        </div>
+        <span class="material-symbols-outlined cases__icon">
+          arrow_forward_ios
+        </span>
+      </div>
       <a class="cases__aside-button" href="">
         Ver mais
       </a>
       </aside>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer__box-contacts">
+      <h1 class="footer__title">Receba <span>novassas novidades</span></h1>
+      <p class="footer__text">Quer receber conteúdos exclusivos no seu e-mail?</p>
+      <form class="footer__form" action="">
+        <input class="footer__input" type="text" placeholder="Digite seu nome">
+        <input class="footer__input" type="email" placeholder="Digite seu e-mail">
+        <label class="container footer__label">
+          <span>
+            Ao informar meus dados, eu concordo com a Política de Privacidade e concordo em receber comunicações.
+          </span>
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <button class="footer__button" type="submit">
+          <span class="material-symbols-outlined footer__icon">
+            add_circle
+          </span>
+          <span>
+            Cadastrar
+          </span>
+        </button>
+      </form>
+    </div>
+    
+    <div class="footer__copyright">
+      <p>Copyright 2022 - Todos os dtireitos reservados I Política de privacidade I Condições Gerais</p>
+      <p>Desenvolvido por: Olivas Digital</p>
+    </div>
+  </footer>
 </body>
 </html>

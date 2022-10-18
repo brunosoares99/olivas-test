@@ -4,6 +4,8 @@
 @import 'src/scss/home.scss';
 @import 'src/scss/news.scss';
 @import 'src/scss/cases.scss';
+@import 'src/scss/footer.scss';
+
 @import url('http://fonts.cdnfonts.com/css/myriad-pro');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
 
@@ -25,7 +27,7 @@ a, a:visited, a:hover, a:active {
   padding: 0.1rem 0.75rem;
   border-radius: 23px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: $regular;
   text-transform: uppercase;
   &.tag--small {
     padding: 0.1rem 0.5rem;
@@ -52,4 +54,64 @@ a, a:visited, a:hover, a:active {
 hr {
   border: 1px solid $gray-color-6;
   margin-bottom: 0.5rem;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid $white-color;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $white-color;
+  border: 2px solid $gray-color-5;
+  border-radius: 7px;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: $white-color;
+  border: 2px solid $gray-color-5;
+  border-radius: 7px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: $blue-color-2;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
 }

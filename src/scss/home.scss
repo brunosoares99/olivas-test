@@ -1,3 +1,4 @@
+@import 'src/scss/utilities/variables';
 
 @mixin line-style {
   content: "";
@@ -30,7 +31,7 @@
     text-align: center;
     color: $blue-color-6;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: $regular;
     padding: 1rem 0;
     position: relative;
     &::after {
@@ -103,7 +104,7 @@
   }
   &__aside-button {
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 600;
+    font-weight: $regular;
     color: $pink-color-1;
     border: 1px solid $pink-color-1;
     border-radius: 23px;

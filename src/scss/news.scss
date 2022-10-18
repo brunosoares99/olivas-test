@@ -1,3 +1,5 @@
+@import 'src/scss/utilities/variables';
+
 @mixin line-style {
   content: "";
   display: block;
@@ -89,7 +91,7 @@
   }
   &__aside-button {
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 600;
+    font-weight: $regular;
     color: $white-color;
     border: 1px solid $white-color;
     border-radius: 23px;

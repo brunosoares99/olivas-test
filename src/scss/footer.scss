@@ -1,0 +1,108 @@
+@import 'src/scss/utilities/variables';
+
+@mixin line-style {
+  content: "";
+  display: block;
+  background-color: $blue-color-2;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.footer {
+  background-color: $gray-color-3;
+  min-height: 430px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  position: relative;
+  &__box-contacts {
+    padding: 0.5rem 1rem;
+  }
+  &__title {
+    text-align: center;
+    color: $blue-color-6;
+    font-size: 1.5rem;
+    font-weight: $regular;
+    padding: 1rem 0;
+    position: relative;
+    &::after {
+      @include line-style;
+      width: 60px;
+      height: 4px;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+    }
+    span {
+      color: $blue-color-2;
+    }
+  }
+  &__text {
+    color: $gray-color-12;
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem 0;
+    margin: 1rem 0;
+  }
+  &__label {
+    color: $gray-color-12;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  &__input {
+    background-color: $white-color;
+    border: 2px solid $gray-color-5;
+    border-radius: 7px;
+    padding: .5rem 2rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: $semi-bold;
+    font-size: .75rem;
+    &::placeholder {
+      color:$gray-color-7;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $gray-color-6;
+    }
+  }
+  &__button {
+    border: none;
+    background: $pink-gradient;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    color: $white-color;
+    border-radius: 23px;
+    padding: 0.25rem 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__icon {
+    margin-right: .4rem;
+    font-size: 1rem !important;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__copyright {
+    background-color: $blue-color-9;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem .5rem;
+    color: $blue-color-4;
+    width: 100%;
+    font-weight: $bold;
+    font-size: .8rem;
+    text-align: center;
+    p:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import 'src/scss/utilities/variables';
+
 .header {
   max-width: 100%;
   display: flex;
@@ -9,6 +11,59 @@
     width: 150px;
   }
   &__menu {
-    display: none;
+    &-ul {
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      height: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: $white-color;
+      color: $gray-color-11;
+      font-size: 1rem;
+      li {
+        margin: 2rem 0;
+        list-style: none;
+      }
+      &--active {
+        visibility: visible;  
+        height: 100vh;
+      }
+    }
+    
+    
+  }
+  &__menu-close {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: $gray-color-11;
+    z-index: 101;
+  }
+  &__menu-close--active {
+    visibility: visible;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $green-gradient;
+    color: $white-color !important;
+    font-size: 1rem;
+    font-weight: $semi-bold;
+    padding: .5rem 1.5rem;
+    border-radius: 23px;
+    span:first-child {
+      margin-right: 0.5rem;
+    }
   }
 }
