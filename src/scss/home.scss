@@ -31,7 +31,7 @@
     text-align: center;
     color: $blue-color-6;
     font-size: 1.5rem;
-    font-weight: $regular;
+    font-weight: $semi-bold;
     padding: 1rem 0;
     position: relative;
     &::after {
@@ -52,9 +52,11 @@
   max-width: 100%;
   overflow: hidden;
   padding: 2rem 1rem;
+  position: relative;
   &__title {
     color: $blue-color-6;
     position: relative;
+    font-weight: $semi-bold;
     &::after {
       @include line-style;
       width: 50px;
@@ -62,11 +64,18 @@
       bottom: -10px;
     }
   }
+  &__box-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    justify-items: start;
+  }
   &__article {
     display: grid;
     max-width: 100%;
     grid-template-columns: 1fr;
     margin: 2rem 0;
+    justify-items: center;
   }
   &__cover {
     max-width: 100%;
@@ -74,6 +83,7 @@
   &__news-title {
     color: $blue-color-7;
     font-size: 1.5rem;
+    font-weight: $semi-bold;
   }
   &__news-description{
     font-size: 1rem;
@@ -86,7 +96,10 @@
     gap: .5rem;
   }
   &__aside {
+    max-width: 300px;
+    justify-self: center;
     h3 {
+      font-weight: $semi-bold;
       color: $blue-color-7;
       font-size: 1rem;
     }
@@ -95,6 +108,7 @@
     font-size: 1rem;
     color: $pink-color-1;
     margin-bottom: 1rem;
+    font-weight: $semi-bold;
   }
   &__aside-box-news {
     margin-bottom: .75rem;
@@ -116,3 +130,93 @@
   }
 }
 
+
+
+@media screen and (min-width: 375px) {
+  .blog {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .blog {
+    &__aside {
+      justify-self: end;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .home {
+    &__cover-box {
+      &::after {
+        background-size: 80px 80px;
+        width: 80px;
+        height: 80px;
+        right: 44px;
+        bottom: -35px;
+      }
+    }
+    &__title {
+      margin: 4rem 0;
+      font-size: 2.5rem;
+    }
+  }
+  .blog {
+    padding: 4rem 14rem;
+    &::after {
+      content: "";
+        display: block;
+        position: absolute;
+        background: url(../../src/assets/images/image.png) no-repeat;
+        background-size: 364px 45px;
+        z-index: 101;
+        width: 364px;
+        height: 45px;
+        right: -16px;
+        bottom: 40px;
+    }
+    &__box-content {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    &__cover-box {
+      &::after {
+        background-size: 250px 250px;
+        width: 250px;
+        height: 250px;
+        right: 44px;
+        bottom: -125px;
+      }
+    }
+    &__title {
+      font-size: 3.5rem;
+    }
+  }
+  .blog {
+    &__title {
+      font-size: 3rem;
+    }
+    &__news-title {
+      font-size: 3rem;
+    }
+    &__aside {
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
+    &__aside-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    &__aside-button {
+      padding: .5rem 2.5rem;
+      margin-top: 2rem;
+    }
+  }
+}

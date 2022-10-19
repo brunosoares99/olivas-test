@@ -5,6 +5,7 @@
 @import 'src/scss/news.scss';
 @import 'src/scss/cases.scss';
 @import 'src/scss/footer.scss';
+@import 'src/scss/dropdown.scss';
 
 @import url('http://fonts.cdnfonts.com/css/myriad-pro');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
@@ -21,13 +22,17 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+.body__fixed {
+  position: fixed;
+}
+
 .tag {
   background: $pink-gradient;
   color: $white-color;
   padding: 0.1rem 0.75rem;
   border-radius: 23px;
   font-size: 1rem;
-  font-weight: $regular;
+  font-weight: $semi-bold;
   text-transform: uppercase;
   &.tag--small {
     padding: 0.1rem 0.5rem;
@@ -48,6 +53,9 @@ a, a:visited, a:hover, a:active {
   &.date__news {
     color: $white-color;
     display: block;
+  }
+  &.date--blue {
+    color: $blue-color-7;
   }
 }
 
@@ -114,4 +122,22 @@ hr {
 
 .container input:checked ~ .checkmark:after {
   display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .tag {
+    font-size: 1.25rem;
+    &.tag--small {
+      font-size: .9rem;
+    }
+  }
+  .date {
+    font-size: 1.125rem;
+    &.date--small {
+      font-size: .8rem;
+    }
+  }
+  .checkmark {
+    top: -5px;
+  }
 }

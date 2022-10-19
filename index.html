@@ -11,6 +11,7 @@
   <script src="src/index.js" defer></script>
 </head>
 <body>
+  <hr class="hr__language">
   <header class="header">
     <a href="/">
       <img class="header__logo" src="src/assets/logotipo.svg" alt="Olivas Digital">
@@ -33,11 +34,35 @@
         <li>
           <a href="">Canais de comunicação</a>
         </li>
-        <li class="header__li_button">
+        <li class="header__li-button">
           <a class="header__button" href="">
-            <span class="material-symbols-outlined">mail</span>
-            <span>Fale com especialista</span>
+            <span class="material-symbols-outlined header__mail-icon">mail</span>
+            <span class="header__hidden">Fale com especialista</span>
           </a>
+        </li>
+        <li class="header__search">
+          <div class="header__language">
+            <span class="material-symbols-outlined header__language-icon">
+              public
+            </span>
+            <div class="dropdown">
+              <button onclick="dropDownMenuLanguage()" class="dropbtn">Português</button>
+              <div id="dropDownLanguage" class="dropdown-content">
+                <button class="dropdown__options">Português</button>
+                <button class="dropdown__options">Inglês</button>
+                <button class="dropdown__options">Espanhol</button>
+              </div>
+            </div>
+            <span onclick="dropDownMenuLanguage()" class="material-symbols-outlined header__language-icon icon-pointer">
+              keyboard_arrow_down
+            </span>
+          </div>
+          <div class="header__box-search">
+            <input class="header__input-search" type="text" name="" id="">
+            <span class="material-symbols-outlined header__search-icon">
+              search
+            </span>
+          </div>
         </li>
       </ul>
     </nav>
@@ -51,113 +76,123 @@
       <h1 class="home__title">Conteúdos <span>para Você</span></h1>
       <section class="blog">
         <h2 class="blog__title">Blog</h2>
-        <article class="blog__article">
-          <img class="blog__cover" src="src/assets/images/illustration_computer.png" alt="Menina na frente do computador">
-          <div class="blog__box-news">
-            <span class="tag">Tecnologia</span>
-            <span class="date">11/11/2022</span>
-            <h2 class="blog__news-title">Contando com a tecnologia para o treinamento de especialistas no atendimento</h2>
-            <p class="blog__news-description">
-              Muito mais do que saber ouvir e atender as necessidades de um cliente, o Customer Experience visa ir além e oferecer uma experiência que de fato trará muito mais proximidade entre o cliente e a marca. As boas práticas de um atendimento já não são o que foram há poucos anos atrás, o mercado demanda por profissionais capazes de proporcionar um contato transformador. Não há mais espaço para o atendimento engessado.
-            </p>
-          </div>
-        </article>
-        <aside class="blog__aside">
-          <h2 class="blog__aside-title">Outras postagens:</h2>
-
-          <div class="blog__aside-box-news">
+        <div class="blog__box-content">
+          <article class="blog__article">
+            <img class="blog__cover" src="src/assets/images/illustration_computer.png" alt="Menina na frente do computador">
+            <div class="blog__box-news">
+              <span class="tag">Tecnologia</span>
+              <span class="date">11/11/2022</span>
+              <h2 class="blog__news-title">Contando com a tecnologia para o treinamento de especialistas no atendimento</h2>
+              <p class="blog__news-description">
+                Muito mais do que saber ouvir e atender as necessidades de um cliente, o Customer Experience visa ir além e oferecer uma experiência que de fato trará muito mais proximidade entre o cliente e a marca. As boas práticas de um atendimento já não são o que foram há poucos anos atrás, o mercado demanda por profissionais capazes de proporcionar um contato transformador. Não há mais espaço para o atendimento engessado.
+              </p>
+            </div>
+          </article>
+          <aside class="blog__aside">
+            <h2 class="blog__aside-title">Outras postagens:</h2>
+  
+            <div class="blog__aside-box-news">
+              <hr>
+              <span class="tag tag--small">Customer Experience</span>
+              <h3>Feedback de clientes: transforme tudo em dados e obtenha melhores resultados</h3>
+              <span class="date date--small">11/11/2022</span>
+            </div>
+  
+            <div class="blog__aside-box-news">
+              <hr>
+              <span class="tag tag--small">Tecnologia</span>
+              <h3>Chatbot cognitivo: o que é e como pode ajudar?</h3>
+              <span class="date date--small">11/11/2022</span>
+            </div>
+  
+            <div class="blog__aside-box-news">
+              <hr>
+              <span class="tag tag--small">Customer Experience</span>
+              <h3>Atendimento ao cliente: quais as expectativas da Geração Millennials?</h3>
+              <span class="date date--small">11/11/2022</span>
+            </div>
+  
+            <div class="blog__aside-box-news">
+              <hr>
+              <span class="tag tag--small">Customer Experience</span>
+              <h3>Open Banking: o sucesso do sistema no Brasil</h3>
+              <span class="date date--small">11/11/2022</span>
+            </div>
+  
+            <div class="blog__aside-box-news">
+              <hr>
+              <span class="tag tag--small">Customer Experience</span>
+              <h3>Open Banking: o sucesso do sistema no Brasil</h3>
+              <span class="date date--small">11/11/2022</span>
+            </div>
+  
+            <a class="blog__aside-button" href="">
+              Ver mais
+            </a>
+          </aside>
+        </div>
+      </section>
+    </section>
+    <div class="news__decorator">
+      <div class="news__decorator-image"></div>
+    </div>
+    <section class="news">
+      <h2 class="news__title">Principais notícias</h2>
+      <div class="news__box-content">
+        <aside class="news__aside">
+          <div class="news__aside-box-news">
             <hr>
-            <span class="tag tag--small">Customer Experience</span>
+            <span class="date date--small date__news">11/11/2022</span>
+            <span class="tag tag--small tag__news">Customer Experience</span>
             <h3>Feedback de clientes: transforme tudo em dados e obtenha melhores resultados</h3>
-            <span class="date date--small">11/11/2022</span>
           </div>
-
-          <div class="blog__aside-box-news">
+  
+          <div class="news__aside-box-news">
             <hr>
-            <span class="tag tag--small">Tecnologia</span>
+            <span class="date date--small date__news">11/11/2022</span>
+            <span class="tag tag--small tag__news">Tecnologia</span>
             <h3>Chatbot cognitivo: o que é e como pode ajudar?</h3>
-            <span class="date date--small">11/11/2022</span>
           </div>
-
-          <div class="blog__aside-box-news">
+  
+          <div class="news__aside-box-news">
             <hr>
-            <span class="tag tag--small">Customer Experience</span>
+            <span class="date date--small date__news">11/11/2022</span>
+            <span class="tag tag--small tag__news">Customer Experience</span>
             <h3>Atendimento ao cliente: quais as expectativas da Geração Millennials?</h3>
-            <span class="date date--small">11/11/2022</span>
           </div>
-
-          <div class="blog__aside-box-news">
-            <hr>
-            <span class="tag tag--small">Customer Experience</span>
-            <h3>Open Banking: o sucesso do sistema no Brasil</h3>
-            <span class="date date--small">11/11/2022</span>
-          </div>
-
-          <div class="blog__aside-box-news">
-            <hr>
-            <span class="tag tag--small">Customer Experience</span>
-            <h3>Open Banking: o sucesso do sistema no Brasil</h3>
-            <span class="date date--small">11/11/2022</span>
-          </div>
-
-          <a class="blog__aside-button" href="">
+  
+          <a class="news__aside-button" href="">
             Ver mais
           </a>
         </aside>
-      </section>
-    </section>
-    <section class="news">
-      <h2 class="news__title">Principais notícias</h2>
-      <aside class="news__aside">
-        <div class="news__aside-box-news">
-          <hr>
-          <span class="date date--small date__news">11/11/2022</span>
-          <span class="tag tag--small tag__news">Customer Experience</span>
-          <h3>Feedback de clientes: transforme tudo em dados e obtenha melhores resultados</h3>
-        </div>
-
-        <div class="news__aside-box-news">
-          <hr>
-          <span class="date date--small date__news">11/11/2022</span>
-          <span class="tag tag--small tag__news">Tecnologia</span>
-          <h3>Chatbot cognitivo: o que é e como pode ajudar?</h3>
-        </div>
-
-        <div class="news__aside-box-news">
-          <hr>
-          <span class="date date--small date__news">11/11/2022</span>
-          <span class="tag tag--small tag__news">Customer Experience</span>
-          <h3>Atendimento ao cliente: quais as expectativas da Geração Millennials?</h3>
-        </div>
-
-        <a class="news__aside-button" href="">
-          Ver mais
-        </a>
-      </aside>
-      <article class="news__article">
-        <div class="news__box-cover">
-          <img class="news__cover" src="src/assets/images/illustration_computer.png" alt="Menina na frente do computador">
-        </div>
-        <div class="news__details-slide">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="news__box-news">
-          <div>
-            <span class="tag">Tecnologia</span>
-            <span class="date">11/11/2022</span>
+        <article class="news__article">
+          <div class="news__box-cover">
+            <img class="news__cover" src="src/assets/images/illustration_computer.png" alt="Menina na frente do computador">
           </div>
-          <h2 class="news__news-title">Contando com a tecnologia para o treinamento de especialistas no atendimento</h2>
-          <p class="news__news-description">
-            Muito mais do que saber ouvir e atender as necessidades de um cliente, o Customer Experience visa ir além e oferecer uma experiência que de fatoará muito mais proximidade entre o cliente e a marca.
-          </p>
-        </div>
-      </article>
+          <div class="news__details-slide">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="news__box-news">
+            <div>
+              <span class="tag">Tecnologia</span>
+              <span class="date date--blue">11/11/2022</span>
+            </div>
+            <h2 class="news__news-title">Contando com a tecnologia para o treinamento de especialistas no atendimento</h2>
+            <p class="news__news-description">
+              Muito mais do que saber ouvir e atender as necessidades de um cliente, o Customer Experience visa ir além e oferecer uma experiência que de fatoará muito mais proximidade entre o cliente e a marca.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
+    <div class="cases__decorator">
+      <div class="cases__decorator-image"></div>
+    </div>
     <section class="cases">
       <h2 class="cases__title">Cases</h2>
       <div class="cases__slider">
@@ -181,7 +216,7 @@
           </div>
           <div class="cases__slider-box">
             <div class="cases__slider-box-image">
-              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+              <img src="src/assets/images/cases/call-center.jpg" alt="Organização Ágil">
             </div>
             <div class="cases__slider-details">
               <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>
@@ -195,7 +230,7 @@
           </div>
           <div class="cases__slider-box">
             <div class="cases__slider-box-image">
-              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+              <img src="src/assets/images/cases/customer-pc.jpg" alt="Organização Ágil">
             </div>
             <div class="cases__slider-details">
               <h3 class="cases__slider-title">Pernambucanas digitaliza a operação e melhora a experiência do cliente</h3>
@@ -209,7 +244,7 @@
           </div>
           <div class="cases__slider-box cases__slider-box--active">
             <div class="cases__slider-box-image">
-              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+              <img src="src/assets/images/cases/customer.jpg" alt="Organização Ágil">
             </div>
             <div class="cases__slider-details">
               <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>
@@ -223,7 +258,7 @@
           </div>
           <div class="cases__slider-box">
             <div class="cases__slider-box-image">
-              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+              <img src="src/assets/images/cases/valadares.jpg" alt="Organização Ágil">
             </div>
             <div class="cases__slider-details">
               <h3 class="cases__slider-title">Pernambucanas digitaliza a operação e melhora a experiência do cliente</h3>
@@ -251,7 +286,7 @@
           </div>
           <div class="cases__slider-box">
             <div class="cases__slider-box-image">
-              <img src="src/assets/images/cases/agile.jpg" alt="Organização Ágil">
+              <img src="src/assets/images/cases/call-center.jpg" alt="Organização Ágil">
             </div>
             <div class="cases__slider-details">
               <h3 class="cases__slider-title">A chegada das empresas nativas digitais revoluciona o tradicional ambiente de call center</h3>

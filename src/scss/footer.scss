@@ -11,8 +11,8 @@
 .footer {
   background-color: $gray-color-3;
   min-height: 430px;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   position: relative;
   &__box-contacts {
     padding: 0.5rem 1rem;
@@ -21,7 +21,7 @@
     text-align: center;
     color: $blue-color-6;
     font-size: 1.5rem;
-    font-weight: $regular;
+    font-weight: $semi-bold;
     padding: 1rem 0;
     position: relative;
     &::after {
@@ -81,6 +81,7 @@
     padding: 0.25rem 1.5rem;
     display: flex;
     justify-content: center;
+    cursor: pointer;
   }
   &__icon {
     margin-right: .4rem;
@@ -103,6 +104,63 @@
     text-align: center;
     p:first-child {
       margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    &__title {
+      font-size: 2rem;
+    }
+    &__copyright {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 2rem 1rem;
+      p:first-child {
+        margin-bottom: 0;
+      }
+    }
+    &__box-contacts {
+      position: relative;
+      &::before {
+        content: "";
+          display: block;
+          position: absolute;
+          background: url(../../src/assets/images/image.png) no-repeat;
+          background-size: 364px 45px;
+          z-index: 101;
+          width: 364px;
+          height: 45px;
+          left: -16px;
+          top: 0px;
+      }
+      &::after {
+        content: "";
+          display: block;
+          position: absolute;
+          background-color: $yellow-color-2;
+          border-bottom-left-radius: 200px;
+          border-bottom-right-radius: 200px;
+          z-index: 101;
+          width: 240px;
+          height: 120px;
+          right: 0px;
+          bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    &__button {
+      padding: .5rem 2.5rem;
     }
   }
 }
