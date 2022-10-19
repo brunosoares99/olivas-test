@@ -160,7 +160,7 @@
     &__menu {
       width: 100%;
       &-ul {
-      overflow: hidden;
+      overflow: visible;
       visibility: visible;
       position: static;
       display: flex;
