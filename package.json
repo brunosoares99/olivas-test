@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build-sass": "node-sass src/scss/main.scss dist/css/main.css",
     "sass": "node-sass -w src/scss/ -o dist/css --recursive",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

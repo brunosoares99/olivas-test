@@ -4,6 +4,11 @@ Projeto feito por mim, utilizando HTML, SCSS e Javascript.
 
 [@brunosoares99](https://github.com/brunosoares99).
 
+
+# Instruções
+
+Para buildar o projeto basta digitar `npm run build-sass` e executar o arquivo index.html na raiz do projeto.
+
 ## Imagens
 
 ![Screenshot 1](https://github.com/brunosoares99/olivas-test/blob/main/screenshots/screenshot_1.png)
