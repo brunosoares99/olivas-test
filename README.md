@@ -1,4 +1,4 @@
-# Projeto Landing Page Olivas Digital
+# Projeto Landing Page Responsiva Olivas Digital
 
 Projeto feito por mim, utilizando HTML, SCSS e Javascript.
 
